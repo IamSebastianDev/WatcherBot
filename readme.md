@@ -221,8 +221,6 @@ The `WatcherBot` class is used to create a new watcher. The constructor is used 
 <!---->
 > Note: All methods & properties below reference a created watcher instance. `WatcherBot` does not have any static methods or properties.
 
-----
-
 ### `watcher.takeWatch <function>`
 
 ```js
@@ -239,8 +237,6 @@ property name|type| description
 watching | \<function> | The main loop function defined by the user. Can not be ommited.
 endOfWatch | \<function?> | A method to end the loop.
 dangerDrawsNear | \<function?> | A method to react on an error thrown inside the loop.
-
-----
 
 ### `watcher.tellATale <function>`
 
@@ -268,19 +264,13 @@ watches | \<boolean?> | A boolean indicating if the number of watches taken shou
 
 > Note: While the method can be anytime on the created watcher, calling it inside the `endOfWatch` method makes the most sense, as this will exit the loop and you can log the final metrics.
 
-----
-
 ### `watcher.theWatchersName <string>`
 
 A property returning the name of the created watcher.
 
-----
-
 ### `watcher.watchesTaken <number>`
 
 A property returning the amount of completes cycles.
-
-----
 
 ### `watching <async function>`
 
@@ -329,8 +319,6 @@ endOfWatch   | \<Function> | A optional function that should be used to exit the
 dangerDrawsNear | \<Function>  | A optional function that should be used to handle errors.
 theWatcher | \<Object> | A reference to the Watcher itself.
 
-----
-
 ### `endOfWatch <async function>`
 
 The `endOfWatch` method is passed to the `takeWatch` method and is then passed back to the `watching` method with access to certain properties. This method does not exist on the watcher, but is instead created by the user itself. The method is used to exit the loop, close the browser, and perform any kind of notification the used intends to do.
@@ -352,7 +340,7 @@ const endOfWatch = async ({ page, browser, theWatcher }) => {
         body: `My watch has ended. I found what you were looking for!`,
     })
     
-    // closee the browser instance
+    // close the browser instance
     await browser.close()
 }
 
@@ -365,8 +353,6 @@ property name|type| description
 page |Puppeteer \<Page> Object. | The page that Puppeteer is accessing at the moment.
 browser | Puppeteer \<Browser> Object | The Puppeteer browser instance that was created.
 theWatcher | \<Object> | The created watcher instance.
-
-----
 
 ### `dangerDrawsNear <async function>`
 
