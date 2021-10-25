@@ -1,6 +1,6 @@
 {
   "name": "watcherbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bot that can be used to watch changes on a webpage",
   "module": "./dist/watcherbot.min.mjs",
   "main": "./dist/watcherbot.min.js",
