@@ -3,15 +3,15 @@ export class WatcherBot {
      *
      * @param { Object } param0
      * @param { String } param0.url
-     * @param { Number } param0.timeToRefresh
+     * @param { Number } param0.watchLength
      * @param { String } param0.watcherName
      * @param { Boolean } param0.logEnabled
      * @param { Boolean } param0.logDetails
      * @param { Boolean } param0.logTime
      */
-    constructor({ url, timeToRefresh, watcherName, logEnabled, logDetails, logTime, }?: {
+    constructor({ url, watchLength, watcherName, logEnabled, logDetails, logTime, }?: {
         url: string;
-        timeToRefresh: number;
+        watchLength: number;
         watcherName: string;
         logEnabled: boolean;
         logDetails: boolean;
@@ -87,15 +87,16 @@ export class WatcherBot {
      *  below 100ms and has no upper bounds
      *
      *  @param { {} } param0 - the object passed to the method that contains property for the configuration
-     *  @param { Number } param0.timeToRefresh - the number in seconds between refreshes of the page
+     *  @param { Number } param0.watchLength - the number in seconds between refreshes of the page
      *
      *  @returns { Number } the number of milliseconds betweeen each refresh
      */
     private _assertRefreshCycle;
     /**
+     * @private
      * @property { Number }
      */
-    get remainingOffset(): number;
+    private get _remainingOffset();
     /**
      * @private
      * @property { Object } log - A property containing methods to log different messages to the console
@@ -137,5 +138,5 @@ export class WatcherBot {
      * @description method to log the metrics of the Bot to the console.
      *
      */
-    public tellATale({ time, cycles }?: any): void;
+    public tellATale({ time, watches }?: any): void;
 }
