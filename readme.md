@@ -221,7 +221,7 @@ The `WatcherBot` class is used to create a new watcher. The constructor is used 
 <!---->
 > Note: All methods & properties below reference a created watcher instance. `WatcherBot` does not have any static methods or properties.
 
---
+----
 
 ### `watcher.takeWatch <function>`
 
@@ -240,7 +240,7 @@ watching | \<function> | The main loop function defined by the user. Can not be 
 endOfWatch | \<function?> | A method to end the loop.
 dangerDrawsNear | \<function?> | A method to react on an error thrown inside the loop.
 
---
+----
 
 ### `watcher.tellATale <function>`
 
@@ -268,19 +268,19 @@ watches | \<boolean?> | A boolean indicating if the number of watches taken shou
 
 > Note: While the method can be anytime on the created watcher, calling it inside the `endOfWatch` method makes the most sense, as this will exit the loop and you can log the final metrics.
 
---
+----
 
 ### `watcher.theWatchersName <string>`
 
 A property returning the name of the created watcher.
 
---
+----
 
 ### `watcher.watchesTaken <number>`
 
 A property returning the amount of completes cycles.
 
---
+----
 
 ### `watching <async function>`
 
@@ -329,7 +329,7 @@ endOfWatch   | \<Function> | A optional function that should be used to exit the
 dangerDrawsNear | \<Function>  | A optional function that should be used to handle errors.
 theWatcher | \<Object> | A reference to the Watcher itself.
 
---
+----
 
 ### `endOfWatch <async function>`
 
@@ -366,7 +366,7 @@ page |Puppeteer \<Page> Object. | The page that Puppeteer is accessing at the mo
 browser | Puppeteer \<Browser> Object | The Puppeteer browser instance that was created.
 theWatcher | \<Object> | The created watcher instance.
 
---
+----
 
 ### `dangerDrawsNear <async function>`
 
