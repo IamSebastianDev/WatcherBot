@@ -2,6 +2,33 @@
 
 WatcherBot is a small, simple bot that uses puppeteer to watch a website for specified changes in a user given interval and has a 'interestingly' themed API.
 
+## Table of Contents
+
+- [WatcherBot](#watcherbot)
+  - [Table of Contents](#table-of-contents)
+  - [Installing](#installing)
+  - [Usage](#usage)
+    - [Watching](#watching)
+    - [Taking the Watch](#taking-the-watch)
+    - [Ending the Watch](#ending-the-watch)
+  - [Configuring your Watcher](#configuring-your-watcher)
+    - [using JSON](#using-json)
+    - [using JavaScript](#using-javascript)
+    - [Declaring the configuration inline](#declaring-the-configuration-inline)
+    - [Reference](#reference)
+  - [API Reference](#api-reference)
+    - [`WatcherBot <Class>`](#-watcherbot--class--)
+    - [`watcher.takeWatch <function>`](#-watchertakewatch--function--)
+    - [`watcher.tellATale <function>`](#-watchertellatale--function--)
+    - [`watcher.theWatchersName <string>`](#-watcherthewatchersname--string--)
+    - [`watcher.watchesTaken <number>`](#-watcherwatchestaken--number--)
+    - [`watching <async function>`](#-watching--async-function--)
+    - [`endOfWatch <async function>`](#-endofwatch--async-function--)
+    - [`dangerDrawsNear <async function>`](#-dangerdrawsnear--async-function--)
+  - [Example](#example)
+  - [Dependencies](#dependencies)
+  - [License](#license)
+
 ## Installing
 
 You can install the watcherbot via `npm`.
@@ -383,7 +410,7 @@ page |Puppeteer \<Page> Object. | The page that Puppeteer is accessing at the mo
 browser | Puppeteer \<Browser> Object | The Puppeteer browser instance that was created.
 theWatcher | \<Object> | The created watcher instance.
 
-## Example Code
+## Example
 
 The following snippets show a complete example of what a **watcher** could look like. It is a working example, so you can copy this code to test it out.
 
