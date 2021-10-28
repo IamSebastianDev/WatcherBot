@@ -1,12 +1,12 @@
 {
   "name": "watcherbot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A bot that can be used to watch changes on a webpage",
   "module": "./dist/watcherbot.min.mjs",
   "main": "./dist/watcherbot.min.js",
   "types": "./dist/watcherbot.d.ts",
   "scripts": {
-    "watch": "node ./project/main.mjs",
+    "watch": "node ./exampleProject/main.mjs",
     "dev": "rollup --config rollup.config.js --watch",
     "build": "rollup --config rollup.config.js",
     "prepublish": "npx tsc"

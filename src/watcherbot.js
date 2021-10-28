@@ -67,7 +67,7 @@ class WatcherBot {
 		 */
 
 		this._refreshCycle = this._assertRefreshCycle({
-			watchlength: config?.watchLength || watchLength,
+			watchLength: config?.watchLength || watchLength,
 		});
 
 		/**
@@ -237,7 +237,7 @@ class WatcherBot {
 		offsetOvertime: (remainingOffset) => {
 			console.log(
 				this._log.colorOrange,
-				`${this._log.botName} The request took ${remainingOffset}ms longer then the specified offset. Timings may not be accurate anymore. Try increasing the 'config.timeToRefresh' value.`
+				`${this._log.botName} The request took ${remainingOffset}ms longer then the specified offset. Timings may not be accurate anymore. Try increasing the 'config.watchLength' value.`
 			);
 		},
 		watchEnd: () => {
